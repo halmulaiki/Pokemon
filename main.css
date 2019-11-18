@@ -1,0 +1,48 @@
+body{
+  margin: 0;
+  background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/pokemon-background-4.jpg");
+background-size: cover;
+background-attachment: fixed;
+
+}
+#heading{
+background-color: red;
+color: rgb(44, 135, 219);
+display: grid;
+padding: 0px 29px;
+
+}
+#heading img{
+  position: sticky;
+}
+#navbar{
+  display: grid;
+  grid-template: 0px / 100px 100px 100px 100px;
+  padding: 3px 29px 24px 92px;
+  background-color: gray;
+
+}
+#navbar a{
+  text-decoration: none;
+  display: block;
+}
+.gif{
+  display: grid;
+  grid-template: 187 / 187 187 187 ;
+  justify-content: center;
+
+}
+.gif div{
+
+
+}
+.middle{
+  display: grid;
+  grid-template: 207px / 100px 100px 100px 100px;
+  grid-column-gap: 30px;
+  justify-content: center;
+  padding: 45px 68px 81px 80px;
+}
+.middle div{
+  background-color: rgb(250, 188, 99);
+}
