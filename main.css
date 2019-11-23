@@ -58,30 +58,32 @@ width: 143px;
 }
 #top {
  position: relative;
-  overflow: hidden;
-  border-right: .15em solid orange;
-  white-space: nowrap;
+overflow: hidden;
+
   margin: 0 auto;
   letter-spacing: .15em;
-  animation:
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+
 }
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+
+.forms {
+position: absolute;
+
 }
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-}
-.middle{
+.middle {
+
   display: grid;
-  grid-template: 207px / 100px 100px 100px 100px;
-  grid-column-gap: 30px;
+  grid-template: 207px / 247px 262px 209px;
+  grid-column-gap: 8px;
+  grid-template-rows: 8px;
   justify-content: center;
-  padding: 45px 68px 81px 80px;
+  padding: 77px 127px 81px 80px;
+}
+.middle img{
+  justify-content: center;
 }
 .middle div{
-  background-color: rgb(250, 188, 99);
+    background-color: red;
+    margin: auto;
+    padding: 10px 10px 10px 10px;
+    border-radius: 13%;
 }
