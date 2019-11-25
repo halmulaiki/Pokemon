@@ -82,7 +82,7 @@ position: absolute;
   justify-content: center;
 }
 .middle div{
-    background-color: red;
+    background-color: rgb(255, 107, 107);
     margin: auto;
     padding: 10px 10px 10px 10px;
     border-radius: 13%;

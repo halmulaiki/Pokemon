@@ -20,14 +20,15 @@ class Trainer {
  all(){
    return this.listPokemon
  }
- get(name){
-   this.name =name
-   this.hp = hp
-   this.attack = atk
-   this.defense = def
-   this.abilities = [""]
- }
+ // get(name){
+ //   name = data.name
+ //   hp = data.stats[5].base_stat
+ //   attack = data.stats[4].base_stat
+ //   defense = data.stats[3].base_stat
+ //   abilities = data.abilities[0].ability.name
+ // }
 }
+
 /***********************************************************
 /***********************************************************
 ***********************************************************/
@@ -40,13 +41,14 @@ queryPokemonAPI(url, i)
 /***********************************************************
 /***********************************************************
 ***********************************************************/
-
+  trainer = new Trainer("Haroun")
 function queryPokemonAPI (url,i){
     fetch(url)
     .then((resp) =>{return resp.json()})
     .then((data) => {// this is where it's resolved
       // let pokemon = new Pokemon (data.forms)
 
+      trainer.listPokemon.push(name)
       console.log(data);
       console.log(data.name);
       console.log(data.abilities[0].ability.name);//abilities
@@ -55,9 +57,7 @@ function queryPokemonAPI (url,i){
       console.log(data.stats[3].base_stat);//defense
       console.log(data.sprites.front_default)//pic
 
-// let jim = document.getElementById('writing'){
-//   jim.innerText = `abilities:${data.abilities[0].ability.name}, hp: ${data.stats[3].base_stat)}`
-// }
+
 
 
       let head = document.createElement('h1')
@@ -128,7 +128,10 @@ function geneRandomLink(){
 
 
 
-
+function myName() {
+  var x = document.getElementById("unit-name").value;
+  document.getElementById("name").innerHTML = x;
+}
 
 
 
