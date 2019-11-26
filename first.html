@@ -14,11 +14,13 @@
       <h2 id = "top">Welcome to Pokedex</h2>
       <h3 id = "top"> Do you want to become Pokemon Trainer?</h3>
     </div>
-    <form id="new-unit-form" action="index.html" action = "myName()">
-      First Name: <input type="text" id="unit-name">
-      Last Name: <input type="text" id="unit-name">
-      <input value="Submit" type="submit" onclick="myName()">
+    <form name="myForm" id="new-unit-form" action="index.html"  onsubmit="return validateForm()">
+       Name: <input id = "trainer-input"type="text" id="firstname"name="fname">
+
+      <input value="Create Trainer" type="submit" onclick="trainerForm()">
+
     </form>
+
     <script src = "main.js"></script>
   </body>
 </html>

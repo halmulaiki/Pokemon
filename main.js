@@ -1,12 +1,12 @@
-
+let trainerForm = document.getElementById('new-unit-form')
 
 class Pokemon{
-    constructor(name, hp, atk, defense){
-    this.name =  name
-    this.hp = hp
-    this.attack = atk
-    this.defense = defense
-    this.abilities = ['']
+    constructor(data,abilities){
+    this.name =  data.name
+    this.hp = data.stats[5].base_stat
+    this.attack = data.stats[4].base_stat
+    this.defense = data.stats[3].base_stat
+    this.abilities = abilities
   }
 
 }
@@ -15,13 +15,15 @@ class Trainer {
   constructor(name) {
   this.name = name
   this.listPokemon = []
-  this.all = this.all.bind(this)
+  // this.all = this.all.bind(this)
 
  }
  all(){
    return this.listPokemon
  }
-
+ get(name) {
+   return name
+ }
 
 }
 
@@ -38,14 +40,29 @@ queryPokemonAPI(url, i)
 /***********************************************************
 ***********************************************************/
  // pokemon = new Pokemon(name, hp, attack, defense)
-  trainer = new Trainer("Haroun")
+trainer = new Trainer("Haroun")
 function queryPokemonAPI (url,i){
     fetch(url)
     .then((resp) =>{return resp.json()})
     .then((data) => {// this is where it's resolved
-      // let pokemon = new Pokemon (data.forms)
 
-      trainer.listPokemon.push(name)
+      abilitiesHolder = []
+      for(let i = 0;  i< data.abilities.lenght; i++){
+        abilitiesHolder.push(data.abilities[i].ability.name)
+      }
+      // trainerForm =()=> {
+      //   let first=document.getElementById("firstname").value;
+      //   // let name = document.getElementById('trainer-input').value
+      //   let trainer = new Trainer(name)
+      //   let outputMessage = "Welcome, " + first;
+      // document.getElementById("Name").innerHTML = outputMessage;
+      //   trainer.listPokemon.push(pokemon)
+      //   trainerForm.style.display = 'none'
+      //   trainerIcon.style.display = 'block'
+      // }
+let pokemon = new Pokemon (data, abilitiesHolder)
+  trainer.listPokemon.push(pokemon)
+
       // pokemon.push(name, hp, attack, defense)
       console.log(data);
       console.log(data.name);
@@ -127,95 +144,29 @@ function geneRandom(min, max){
 function geneRandomLink(){
   return `https://fizal.me/pokeapi/api/v2/id/${geneRandom(1,150)}.json`
 }
-
-
-
-function myName() {
-  var x = document.getElementById("unit-name").value;
-  document.getElementById("name").innerHTML = x;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let poke = document.getElementById('middle');
-// queryPokemonAPI = ()=>{
-//   pokemon = []
-//   for (let i = 1; i <= 150; i+=1) {
-//    let link = (`https://fizal.me/pokeapi/api/v2/id/${i}.json`)
-//    pokemon.push(fetch(link).then((resp) => resp.json()))
-//
-//  }
-//  Promise.all(pokemon).then((results) => {
-//      let pokedex = results.map((result) => ({
-//          name: result.name,
-//          image: result.sprites['front_default'],
-//          hp: result.stats[5].stat.base_st,
-//
-//          type: result.types.map((type) => type.type.name).join(', '),
-//          id: result.id
-//      }))
-//      displayPokemon(pokedex);
-//  })
+// function validateForm() {
+//   var x = document.forms["myForm"]["fname"].value;
+//   if (x == "") {
+//     alert("Name must be filled out");
+//     return false;
 //
 // }
+
 //
-//
-// let displayPokemon = (pokedex) => {
-//     console.log(pokemon);
-//     let middleHTMLString = pokedex
-//         .map(
-//             (pokedex) => `
-//         <div class="ret">
-//             <img class="card-image" src="${pokedex.image}"/>
-//             <h2 class="card-title">${pokedex.id}. ${pokedex.name}</h2>
-//             <p class="card-subtitle">abilities: ${pokedex.type}</p>
-//             <p class="card-subtitle">hp: ${pokedex.hp}</p>
-//
-//         </div>
-//     `
-//         )
-//         .join('')
-//     poke.innerHTML = middleHTMLString;
-// };
-//
-//
-// queryPokemonAPI()
+// function myName() {
+//   var x = document.getElementById("unit-name").value;
+//   document.getElementById("name").innerHTML = x;
+// }
 
 
-// let list  = document.getElementById('middle')
+
 //
-// query = ()=>{
-//    fetch(`https://fizal.me/pokeapi/api/v2/id/25.json`)
-//    .then((resp) =>{return resp.json()})
-//    .then((data) => {
-//      console.log(data);
-//
-//     for(let i in data){
-//       console.log(i)
-//       let li = document.createElement('li')
-//       li.innerText = `${i} ${data[i]['model_year']} ${data[i]}`
-//       list.appendChild(li)
+// //class Trainer {
+//     constructor(name) {
+//       this.name = name
+//       this.pokemon = []
 //     }
-//
-//    })
-//
+//     addPokemon(pokemon) {
+//       this.pokemon.push(pokemon)
+//       return `You added ${pokemon.name} to your team!`
+//     }

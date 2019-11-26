@@ -1,89 +1,94 @@
-body{
-margin: 0;
-background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/pokemon-background-4.jpg");
-background-size: cover;
-background-attachment: fixed;
+body {
+  margin: 0;
+  background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/pokemon-background-4.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
 
+#heading {
+  background-color: red;
+  color: #2c87db;
+  display: grid;
+  padding: 0px 29px;
+  justify-content: center;
 }
-#heading{
-background-color: red;
-color: rgb(44, 135, 219);
-display: grid;
-padding: 0px 29px;
-justify-content: center;
-}
-#heading img{
+#heading img {
   position: sticky;
 }
-#navbar{
+
+#navbar {
   display: grid;
-  grid-template: 0px / 100px 100px 100px 100px;
+  grid-template: 0px/100px 100px 100px 100px;
   padding: 3px 29px 24px 92px;
   background-color: gray;
-
 }
-#navbar a{
+#navbar a {
   text-decoration: none;
   display: block;
 }
-#trainer img{
+
+#trainer img {
   float: right;
   height: 414px;
   width: 196px;
   padding: 71px 29px 190px;
 }
-#middle {
-display: grid;
-align-items: center;
-padding: 51px 124px 96px 63px;
-font-size: 115.5%;
-margin: 0;
-justify-content: space-between;
-grid-template: auto / 0px 0px 59px;
-grid-column-gap: 354px;
 
+#middle {
+  display: grid;
+  align-items: center;
+  padding: 51px 124px 96px 63px;
+  font-size: 115.5%;
+  margin: 0;
+  justify-content: space-between;
+  grid-template: auto/0px 0px 59px;
+  grid-column-gap: 354px;
 }
-.btn{
+
+.btn {
   text-align: center;
   padding: 7px 45px 39px 236px;
 }
+
 .ret {
-background-color: rgb(170, 58, 58);
-width: 143px;
+  background-color: #aa3a3a;
+  width: 143px;
 }
-.gif{
+
+.gif {
   justify-content: center;
   display: grid;
-  grid-template: 100 /100 100 100 ;
+  grid-template: 100/100 100 100;
 }
+
 #top {
- position: relative;
-overflow: hidden;
-
+  position: relative;
+  overflow: hidden;
   margin: 0 auto;
-  letter-spacing: .15em;
-
+  letter-spacing: 0.15em;
 }
 
 .forms {
-position: absolute;
-
+  position: absolute;
 }
-.middle {
 
+.middle {
   display: grid;
-  grid-template: 207px / 247px 262px 209px;
+  grid-template: 207px/247px 262px 209px;
   grid-column-gap: 8px;
   grid-template-rows: 8px;
   justify-content: center;
   padding: 77px 127px 81px 80px;
 }
-.middle img{
+.middle img {
   justify-content: center;
 }
-.middle div{
-    background-color: rgb(255, 107, 107);
-    margin: auto;
-    padding: 10px 10px 10px 10px;
-    border-radius: 13%;
+.middle div {
+  background-color: #ff6b6b;
+  margin: auto;
+  padding: 10px 10px 10px 10px;
+  border-radius: 13%;
 }
+
+/*# sourceMappingURL=main.css.map */

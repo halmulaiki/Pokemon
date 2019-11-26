@@ -1,1 +1,96 @@
+body {
+  margin: 0;
+  background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/pokemon-background-4.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
 
+#heading {
+  background-color: red;
+  color: rgb(44, 135, 219);
+  display: grid;
+  padding: 0px 29px;
+  justify-content: center;
+
+  img {
+    position: sticky;
+  }
+}
+
+#navbar {
+  display: grid;
+  grid-template: 0px / 100px 100px 100px 100px;
+  padding: 3px 29px 24px 92px;
+  background-color: gray;
+
+  a {
+    text-decoration: none;
+    display: block;
+  }
+}
+
+#trainer img {
+  float: right;
+  height: 414px;
+  width: 196px;
+  padding: 71px 29px 190px;
+}
+
+#middle {
+  display: grid;
+  align-items: center;
+  padding: 51px 124px 96px 63px;
+  font-size: 115.5%;
+  margin: 0;
+  justify-content: space-between;
+  grid-template: auto / 0px 0px 59px;
+  grid-column-gap: 354px;
+}
+
+.btn {
+  text-align: center;
+  padding: 7px 45px 39px 236px;
+}
+
+.ret {
+  background-color: rgb(170, 58, 58);
+  width: 143px;
+}
+
+.gif {
+  justify-content: center;
+  display: grid;
+  grid-template: 100 / 100 100 100;
+}
+
+#top {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  letter-spacing: .15em;
+}
+
+.forms {
+  position: absolute;
+}
+
+.middle {
+  display: grid;
+  grid-template: 207px / 247px 262px 209px;
+  grid-column-gap: 8px;
+  grid-template-rows: 8px;
+  justify-content: center;
+  padding: 77px 127px 81px 80px;
+
+  img {
+    justify-content: center;
+  }
+
+  div {
+    background-color: rgb(255, 107, 107);
+    margin: auto;
+    padding: 10px 10px 10px 10px;
+    border-radius: 13%;
+  }
+}
